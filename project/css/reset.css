@@ -1,0 +1,49 @@
+html,body,div,a,i,input,span,ul,li,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ol,img,form,input,textarea,th,td,select{
+	margin: 0;
+	padding: 0;
+}
+span,li,a,dt,dd{
+	cursor: pointer;
+}
+a{
+	text-decoration: none;
+	color: black;
+	font-weight: normal;
+}
+/* i{
+	display: inline-block;
+	margin-top: 2px;
+} */
+body{
+	position: relative;
+}
+ul li,ul ol,li{
+	list-style: none;
+}
+input, textarea {
+    outline: none;
+    border: none;
+}
+textarea {
+    resize: none;
+    overflow: auto;
+}
+img{
+	border: none;
+	vertical-align: middle;
+}
+.container{
+	width:1190px;
+	margin: 0 auto; 
+}
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}

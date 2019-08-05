@@ -1,0 +1,196 @@
+.top{
+    width: 100%;
+    height: 110px;;
+}
+.top .logo{
+    float: left;
+    margin-top: 20px;
+}
+.top .head_right{
+    float: right;
+    margin: 20px;
+    width: 600px;
+}
+.top .head_right a{
+    position: relative;
+    float: right;
+    display: block;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    
+}
+.top .head_right a:hover{
+    color: #D61318;
+}
+.top .head_right a .iconfont{
+    margin-right: 10px;
+    color: #D61318;
+    font-size:16px;
+}
+.top .head_right img{
+    vertical-align: top;
+}
+
+/* 中间部分 */
+/* 公共样式 */
+.common{
+    position: relative;
+    width: auto;
+    font-size: 12px;
+    font-family: 宋体;
+    margin: 0px 30px;
+    margin-bottom: 20px;
+}
+
+/* 内容 */
+.middle{
+    width: 100%;
+    height: 580px;
+    background-color: #fe4c4c;
+}
+.middle .m_left{
+    float: left;
+    width: 830px;
+    overflow: hidden;
+}
+.middle .m_right{
+    float: left;
+    width: 360px;
+    height: 580px;
+    overflow: hidden;
+}
+.middle .m_right .login_table{
+    width: 360px;
+    height: 390px;
+    box-sizing: border-box;
+    color: #666;
+    background-color: #ffeded;
+    margin-top: 85px;
+}
+.m_right .login_table .vip{
+    padding-left: 30px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 18px;
+}
+
+.login_table .uniform .alert{
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    background-color: #ffe2e2;
+}
+.login_table .uniform .alert .iconfont{
+    margin: 5px 6px 5px 16px;
+    font-size: 14px;
+}
+
+.login_table .user_box .iconfont{
+    top: 8px;
+    left: 12px;
+    width: 24px;
+    height: 25px;
+    font-size: 20px;
+    background-position: -400px -128px;
+    position: absolute;
+    display: block;
+}
+.login_table .user_box input{
+    width: 258px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 40px;
+    background-color: #fff;
+    border: 1px solid #fd5421;
+    padding: 0 0 0 40px;
+    border-radius: 2px;
+}
+.login_table .user_box .username_tip{
+    position: absolute;
+    top: 45px;
+    left: 0;
+    color: #fd5421;
+}
+
+.login_table .pass_box .iconfont{
+    top: 8px;
+    left: 12px;
+    width: 24px;
+    height: 25px;
+    font-size: 20px;
+    background-position: -400px -128px;
+    position: absolute;
+    display: block;
+}
+.login_table .pass_box input{
+    width: 258px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 40px;
+    background-color: #fff;
+    border: 1px solid #fd5421;
+    padding: 0 0 0 40px;
+    border-radius: 2px;
+}
+.login_table .pass_box .pass_tip{
+    position: absolute;
+    top: 45px;
+    left: 0;
+    color: #fd5421;
+}
+.login_table .check input{
+    float: left;
+    margin-top: 2px;
+    margin-right: 15px;
+}
+.login_table .btn{
+    margin-bottom: 40px;
+}
+.login_table .btn input{
+    padding: 0;
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    border: none;
+    color: #fff;
+    background-color: #f63636;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 12px;
+    text-align: center;
+}
+.login_table .l_bottom{
+    position: relative;
+    margin: 0 30px;
+    width: auto;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.login_table .l_bottom a,.login_table .l_bottom span{
+    background: transparent;
+    color: #555;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.login_table .l_bottom a{
+    float: left;
+    cursor: pointer;
+}
+.login_table .l_bottom a:hover,.login_table .l_bottom span:hover{
+    color: #D61318;
+}
+.login_table .l_bottom span{
+    float: right;
+    cursor: pointer;
+}
+
+
+/* 底部 */
+.footer{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.footer img{
+    margin-left: 100px;
+}

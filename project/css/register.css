@@ -1,0 +1,197 @@
+.top{
+    width: 100%;
+    height: 110px;;
+}
+.top .logo{
+    float: left;
+    margin-top: 20px;
+}
+.top .head_right{
+    float: right;
+    margin: 20px;
+    width: 600px;
+}
+.top .head_right a{
+    position: relative;
+    float: right;
+    display: block;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    
+}
+.top .head_right a:hover{
+    color: #D61318;
+}
+.top .head_right a .iconfont{
+    margin-right: 10px;
+    color: #D61318;
+    font-size:16px;
+}
+.top .head_right img{
+    vertical-align: top;
+}
+
+
+/* 中间部分 */
+.middle{
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.15);
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    height: 680px;
+    overflow: hidden;
+    background: #FAFAFA url("http://www.hangowa.com/member/templates/default/images/register_bg.png") repeat 50% 50%;
+}
+.middle .register_box{
+    background: rgba(0,0,0,0.15);
+    width: 860px;
+    height: 560px;
+    padding: 10px;
+    margin: 60px auto;
+}
+.middle .register_box .inner_box{
+    background-color: #FFF;
+    display: block;
+    width: 820px;
+    height: 520px;
+    padding: 19px;
+    border: solid 1px #CCC;
+    overflow: hidden;
+}
+.middle .inner_box .inner_left{
+    width: 600px;
+    height: 520px;
+    float: left;
+    padding: 4px;
+    border-right: 1px solid rgba(0,0,0,0.15);
+}
+.middle .inner_box .inner_left p{
+    vertical-align: bottom;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    margin-bottom: -1px;
+    border-bottom: solid 1px #E6E6E6
+}
+.middle .inner_box .inner_left p a{
+    color: #F32613;
+    display: block;
+    border-bottom: 3px solid #F32613;
+    line-height: 24px;
+    padding-bottom: 13px;
+    position: relative;
+    font-size: 20px;
+}
+.middle .inner_box .tabs{
+   width: 100%;
+   
+}
+.middle .inner_box .tabs .tablesinner{
+    width: 400px;
+    height: 315px;
+    margin: 46px auto;
+}
+.inner_box .tabs .tablesinner dl{
+    background-color: #FFF;
+    width: 398px;
+    height: 52px;
+    margin-top: -1px;
+    border: solid 1px #E6E6E6;
+    position: relative;
+   
+}
+.inner_box .tabs .tablesinner dl dt{
+    font-size: 14px;
+    line-height: 20px;
+    color: #666;
+    width: 72px;
+    padding: 16px 0 16px 20px;
+    float: left;
+}
+.inner_box .tabs .tablesinner dl dd{
+    height: 28px;
+    float: left;
+    padding: 12px 0;
+    display: block;
+    margin-inline-start: 10px;
+}
+.inner_box .tabs .tablesinner dl dd label{
+    width: 86px;
+    height: 52px;
+    text-align:left;
+    font-size: 12px;
+    color: #F32613;
+    box-sizing: border-box;
+    padding-top:8px;
+    padding-left: 6px;
+    position: absolute;
+    display: block;
+    right: -90px;
+    top: 0;
+}
+.inner_box .tablesinner dl dd input{
+    font-family: "microsoft yahei";
+    font-size: 14px;
+    line-height: 28px;
+    width: 290px;
+    height: 28px;
+    padding: 0;
+    border: none 0;
+}
+.inner_box .tablesinner .min{
+    width: 400px;
+    height:42px;
+    padding-left:20px;
+    line-height: 42px;
+    box-sizing: border-box;
+}
+.inner_box .tablesinner .min input{
+    width: 14px;
+    height:14px;
+   
+}
+.inner_box .tablesinner .min a{
+    font-size: 14px;
+    color: #666;
+}
+.inner_box .tablesinner .min a span{
+    color: blue;
+}
+.inner_box .tablesinner .submitbtn{
+    margin-top: 15px;
+}
+.inner_box .tablesinner .submitbtn input{
+    font-family: "microsoft yahei";
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFF;
+    background-color: #F32613;
+    width: 398px;
+    height: 42px;
+    text-align: center;
+    border: solid 1px #D91E17;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 30px;
+    box-sizing: border-box;
+    
+}
+.inner_right{
+    float: left;
+    width:160px;
+    padding: 6px 0 0 10px;
+    z-index: 22;
+    cursor: pointer;
+}
+
+/* 底部 */
+.footer{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.footer img{
+    margin-left: 100px;
+}
