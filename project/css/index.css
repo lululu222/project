@@ -624,25 +624,57 @@ img{
 	background: #F7F7F7;
 	padding-bottom: 50px;
 }
+.c_Recom .option_title{
+	width: 100%;
+	height:60px;
+	background: #F7F7F7;
+	box-sizing: border-box;
+	padding: 10px 0;
+}
+.c_Recom .option_title .only{
+	display: block;
+	display: flex;
+	justify-content: center;
+	border-bottom: 1px solid #E60012;
+}
+
+.c_Recom .option_title .only li a{
+	width: 200px;
+    text-align: center;
+    font-size: 18px;
+    height: 39px;
+    line-height: 39px;
+	background: #F7F7F7;
+	color: #666;
+	display: block;
+	border: 1px solid #F2F2F2;
+}
+.c_Recom .option_title .only li:hover{
+	box-shadow: 0px 0px 15px #cdcdcd;
+}
+.c_Recom .option_title .only li:hover a{
+	background: #E60012;
+	color: #fff;
+}
 .c_Recom .glist{
 	width: 100%;
 	display: flex;
 }
-.c_Recom li{
+.glist li{
 	width: 228px;
 	border: 1px solid rgba(204,204,204,1);
 	margin-left: 12px;
 	overflow: hidden;
 	background: white;
 }
-.c_Recom li:hover{
+.glist li:hover{
 	box-shadow: 0px 0px 15px #cdcdcd;
 }
 
-.c_Recom li:first-child{
+.glist li:first-child{
 	margin-left: 0;
 }
-.c_Recom li .goodimg{
+.glist li .goodimg{
 	width: 191px;
     height: 193px;
     overflow: hidden;
@@ -650,24 +682,24 @@ img{
 	margin: auto;
 }
 
-.c_Recom li .goodimg a{
+.glist li .goodimg a{
 	display: table-cell;
     width: 191px;
     height: 193px;
     vertical-align: middle;
     text-align: center;
 }
-.c_Recom li .goodimg a img{
+.glist li .goodimg a img{
 	width: 176px;
     max-height: 183px;
 	vertical-align: middle;
 	transition: all 0.6s;
     
 }
-.c_Recom li .goodimg:hover a img{
+.glist li .goodimg:hover a img{
 	transform: scale(1.1);
 }
-.c_Recom li .goodcontent .gname{
+.glist li .goodcontent .gname{
 	font-size: 15px;
     color: #333;
     line-height: 20px;

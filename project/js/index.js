@@ -42,6 +42,15 @@
          },500)
        })
     
+    //选项卡
+    $(function() {
+      $(".option_title .only li").each(function(index) {
+          $(this).click(function(e) {
+            //  $(this).children("a").addClass("option_active").parent("li").siblings().removeClass("id");
+              $(".glist").eq(index).show().siblings(".glist").hide();
+          })
+      });
+  })
     
 
 
