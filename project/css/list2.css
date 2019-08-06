@@ -1,56 +1,4 @@
-/*预定义样式*/
-html,body,div,a,i,input,span,ul,li,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ol,img,form,input,textarea,th,td,select{
-	margin: 0;
-	padding: 0;
-}
-span,li,a,dt,dd{
-	cursor: pointer;
-}
-span:hover,li:hover,a:hover,dt:hover,dd:hover{
-	color: #E60012;
-}
-a{
-	text-decoration: none;
-	color: black;
-	font-weight: normal;
-}
-/* i{
-	display: inline-block;
-	margin-top: 2px;
-} */
-body{
-	position: relative;
-}
-ul li,ul ol,li{
-	list-style: none;
-}
-input, textarea {
-    outline: none;
-    border: none;
-}
-textarea {
-    resize: none;
-    overflow: auto;
-}
-img{
-	border: none;
-	vertical-align: middle;
-}
-.container{
-	width:1190px;
-	margin: 0 auto; 
-}
-.clearfix {
-    *zoom: 1;
-}
 
-.clearfix:before, .clearfix:after {
-    content: " ";
-    display: table;
-}
-.clearfix:after {
-    clear: both;
-}
 
 /* 这是顶部小导航条部分 */
 .s_top{
@@ -325,6 +273,214 @@ img{
 .logo .bottom a:first-child,.logo .bottom a:last-child{
 	border: none;
 }
+.logo .shopcar{
+	width: 150px;
+	height: 36px;
+	box-sizing: border-box;
+	position: absolute;
+	right:100px;;
+	top: 80px;
+}
+.logo .shopcar a{
+	position: relative;
+    display: block;
+    width: 118px;
+    padding: 0 15px;
+    border: 1px solid #e5e5e5;
+    height: 34px;
+    line-height: 34px;
+    background-color: #f9f9f9;
+}
+.logo .shopcar a .iconfont{
+	/* //display: block; */
+	margin-top: 6px;
+	line-height: 27px;
+	position: relative;
+    width: 32px;
+	height: 24px;
+	font-size: 24px;
+	color: #666;
+	
+}
+.logo .shopcar a .iconfont #carcount{
+	position: absolute;
+    top: -17px;
+    left: 17px;
+    padding: 3px;
+    line-height: 10px;
+    border-radius: 3px;
+    text-align: center;
+    color: #fff;
+    background-color: #e60012;
+}
+.logo .shopcar a .text{
+	font-size: 14px;
+
+}
+
+/* <!-- 一级二级菜单 --> */
+.s_menu{
+	width: 100%;
+	height:38px; 
+	display: flex;
+}
+.s_menu span{
+	position: relative;
+	display: inline-block;
+}
+.s_menu>span .num11{
+	display: inline-block;
+	width: 190px;
+	height: 38px;
+	font-size: 16px;
+	line-height: 38px;
+	text-align: center;
+	background: #CC0212;
+	color: #fff;
+}
+.s_menu span .num22,.s_menu span .num33{
+	display: inline-block;
+	width: 110px;
+	height: 38px;
+	font-size: 16px;
+	line-height: 38px;
+	text-align: center;
+	font-style: normal;
+}
+.s_menu span .num33{
+	color: #CC0212;
+}
+
+
+
+/* 列表内容部分 */
+.listscontent{
+	width: 100%;
+	background: #F8F8F8;
+
+}
+.listscontent .c_left{
+	float: left;
+}
+.listscontent .c_left .hot,.listscontent .c_left .zuijin{
+	width: 178px;
+	border: 1px solid #e5e5e5;
+	margin:10px 0;
+	height: 34px;
+    background: #f8f8f8;
+    font-size: 14px;
+    color: #666;
+    padding-left: 10px;
+    line-height: 34px;
+}
+.listscontent .c_right{
+	float: right;
+	width: 991px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.listscontent .c_right .product{
+	border: 1px solid #e5e5e5;
+	background: #f8f8f8 none repeat scroll 0 0;
+	font-size: 12px;
+	width: 100%;
+	height: 42px;
+    line-height: 42px;
+    color: #999;
+}
+.listscontent .c_right .product .fn{
+	width: 100%;
+	height: 100%;
+}
+.listscontent .c_right .product .fn a{
+	display: block;
+	width: auto;
+    padding: 0 30px 0 20px;
+    position: relative;
+    float: left;
+    height: 42px;
+    margin: 0;
+    border-right: 1px solid #e5e5e5;
+    line-height: 42px;
+    text-align: right;
+}
+
+.c_right .p_lists{
+	padding-left: 1px;
+    width: 991px;
+    border: 1px solid #e5e5e5;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.c_right .p_lists ul{
+	width: 100%;
+	height: 100%;
+	display: flex;
+
+}
+.c_right .p_lists ul li{
+	width: 228px;
+	border: 1px solid rgba(204,204,204,1);
+	margin-top: 10px;
+	margin-left: 12px;
+	overflow: hidden;
+	background: white;
+}
+.c_right .p_lists ul li .goodimg{
+	width: 191px;
+    height: 193px;
+    overflow: hidden;
+    position: relative;
+	margin: auto;
+}
+.c_right .p_lists ul li .goodimg a{
+	display: table-cell;
+    width: 191px;
+    height: 193px;
+    vertical-align: middle;
+    text-align: center;
+}
+.c_right .p_lists ul li .goodimg a img{
+	width: 176px;
+    max-height: 183px;
+	vertical-align: middle;
+	transition: all 0.6s;
+}
+.c_right .p_lists ul li .goodimg:hover a img{
+	transform: scale(1.1);
+}
+.c_right .p_lists ul li .goodcontent .gname{
+	font-size: 15px;
+    color: #333;
+    line-height: 20px;
+    padding: 5px 12px;
+    box-sizing: border-box;
+}
+.c_right .p_lists ul li .gprice{
+	line-height: 30px;
+    overflow: hidden;
+    width: 100%;
+    font-weight: normal;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+.c_right .p_lists ul li .gprice .now{
+	font-size: 18px;
+    color: #FF0000;
+    float: left !important;
+}
+.c_right .p_lists ul li .gprice .before{
+	text-decoration: line-through;
+    font-size: 15px;
+    color: #999;
+    float: right;
+}
+
+
+
+
+
 
 
 /* 这是底部 */
