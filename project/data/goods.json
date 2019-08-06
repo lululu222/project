@@ -1,87 +1,150 @@
 [
     {
         "goodsId":"1",
-        "img":"http://admin.lyzb.cn/Upload/Banner/2018072715424848395683.jpg",
+        "img":"http://lyzbjbx.oss-cn-hangzhou.aliyuncs.com/lyzbjbxgo/shop/113/gallery/2018/07/04/15306758619771.jpg",
         "title":"中华名果 巫山脆李 质地脆嫩汁多味美 重庆范围内包邮 3斤",
         "price":"88.00",
-        "sales":"7",
-        "fare":"10.00",
-        "left1":"http://lyzbjbx.oss-cn-hangzhou.aliyuncs.com/lyzbjbxgo/shop/113/gallery/2018/07/04/15306758619771.jpg",
-        "left2":"http://lyzbjbx.oss-cn-hangzhou.aliyuncs.com/lyzbjbxgo/shop/113/gallery/2018/07/04/15306759228122.jpg",
-        "left3":"http://lyzbjbx.oss-cn-hangzhou.aliyuncs.com/lyzbjbxgo/shop/113/gallery/2018/07/04/15306759299649.jpg",
-        "detail1":"http://lyzbimage.jbxgo.com/lyzbjbxgo/shop/113/gallery/2018/07/04/15306762968519.jpg",
-        "detail2":"http://lyzbimage.jbxgo.com/lyzbjbxgo/shop/113/gallery/2018/07/04/15306763333957.jpg",
-        "detail3":"http://lyzbimage.jbxgo.com/lyzbjbxgo/shop/113/gallery/2018/07/04/15306765012764.jpg"
+        "detail":"http://lyzbimage.jbxgo.com/lyzbjbxgo/shop/113/gallery/2018/07/04/15306762968519.jpg"
     },
     {
         "goodsId":"2",
-        "img":"http://admin.lyzb.cn/Upload/Banner/2018041116525095299870.jpg",
+        "img":"http://lyzbjbx.oss-cn-hangzhou.aliyuncs.com/lyzbjbxgo/shop/104/gallery/2018/03/28/15222146320756.jpg",
         "title":"纳米富硒烟台美早大樱桃1kg-现货 24mm-28mm",
         "price":"168.00",
-        "sales":"37",
-        "fare":"0.00",
-        "left1":"http://lyzbjbx.oss-cn-hangzhou.aliyuncs.com/lyzbjbxgo/shop/104/gallery/2018/03/28/15222146320756.jpg",
-        "left2":"http://lyzbjbx.oss-cn-hangzhou.aliyuncs.com/lyzbjbxgo/shop/104/gallery/2018/03/27/15221446698736.jpg",
-        "left3":"http://lyzbjbx.oss-cn-hangzhou.aliyuncs.com/lyzbjbxgo/shop/104/gallery/2018/03/27/15221390522608.jpg",
-        "detail1":"http://lyzbimage.jbxgo.com/lyzbjbxgo/shop/104/images/2018/03/28/15222070315188.jpg",
-        "detail2":"http://lyzbimage.jbxgo.com/lyzbjbxgo/shop/104/images/2018/03/28/15222070497858.jpg",
-        "detail3":"http://lyzbimage.jbxgo.com/lyzbjbxgo/shop/104/images/2018/03/28/15222137795736.jpg"
+        "detail":"http://lyzbimage.jbxgo.com/lyzbjbxgo/shop/104/images/2018/03/28/15222070315188.jpg"
     },
     {
         "goodsId":"3",
-        "img":"http://admin.lyzb.cn/Upload/Banner/2018041116530731178011.jpg",
+        "img":"http://lyzbjbx.oss-cn-hangzhou.aliyuncs.com/lyzbjbxgo/shop/183/gallery/2018/01/31/sp_20180131135821_00749.jpg",
         "title":"花枝山恩施富硒茶 200g",
         "price":"380.00",
-        "sales":"40",
-        "fare":"0.00",
-        "left1":"http://lyzbjbx.oss-cn-hangzhou.aliyuncs.com/lyzbjbxgo/shop/183/gallery/2018/01/31/sp_20180131135821_00749.jpg",
-        "left2":"http://lyzbjbx.oss-cn-hangzhou.aliyuncs.com/lyzbjbxgo/shop/183/gallery/2018/01/31/sp_20180131135821_04649.jpg",
-        "left3":"http://lyzbimage.jbxgo.com/lyzbjbxgo/shop/183/images/2018/01/29/xq_20180129191702_76111.jpg",
-        "detail1":"http://lyzbimage.jbxgo.com/lyzbjbxgo/shop/183/images/2018/01/29/xq_20180129191701_99106.jpg",
-        "detail2":"http://lyzbimage.jbxgo.com/lyzbjbxgo/shop/183/images/2018/01/29/xq_20180129191702_68510.jpg",
-        "detail3":"http://lyzbimage.jbxgo.com/lyzbjbxgo/shop/183/images/2018/01/29/xq_20180129191702_72510.jpg"
+        "detail":"http://lyzbimage.jbxgo.com/lyzbjbxgo/shop/183/images/2018/01/29/xq_20180129191701_99106.jpg"
+     
+    },
+    {
+        "goodsId":"4",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/229/2019/229_06058831176791936_360.png",
+        "title":"东北大米 十月稻田 寒露秋香长粒香米",
+        "price":"29",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/229/2019/229_06058829932781087_1280.jpg"
+    },
+    {
+        "goodsId":"5",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/201/2018/201_05994198335248307_360.jpg",
+        "title":"贝蒂斯特级初榨橄榄油礼盒",
+        "price":"298",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/201/2018/201_05994198382932597_1280.jpg"
+    },
+    {
+        "goodsId":"6",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/234/2019/234_06111688907357378_360.jpg",
+        "title":"小红瓶即食燕窝 即食燕窝小红瓶",
+        "price":"388",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/234/2019/234_06112332307514765_1280.jpg"
+    },
+    {
+        "goodsId":"7",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/177/2018/177_05745237497250547_360.jpg",
+        "title":"新疆天润酸奶冰淇淋化了",
+        "price":"55",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/177/2018/177_05745237497250547_1280.jpg"
+    },
+    {
+        "goodsId":"8",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/238/2019/238_06150364566155086_360.jpg",
+        "title":"新疆天润奶啤酸奶含乳酸菌牛奶饮料",
+        "price":"66.8",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/238/2019/238_06150364434124866_1280.png"
+    },
+    {
+        "goodsId":"10",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/15/2019/15_06058022446225494_360.jpg",
+        "title":"农谷鲜 新鲜散养农家土鸡蛋",
+        "price":"26.5",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/15/2018/15_05991345462436102_1280.jpg"
+    },
+    {
+        "goodsId":"11",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/41/2018/41_05818578862919515_360.jpg",
+        "title":"一苇农佳 秭归脐橙夏橙",
+        "price":"42.9",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/41/2018/41_05818578227079549_1280.jpg"
+    },{
+        "goodsId":"12",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/41/2018/41_05823046628935574_360.jpg",
+        "title":"屈姑 黄桃罐头 易拉罐装",
+        "price":"30",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/41/2018/41_05823050140278328_1280.jpg"
+    },
+    {
+        "goodsId":"14",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/41/2018/41_05818583086201462_360.jpg",
+        "title":"一苇农佳 秭归脐橙 5斤装",
+        "price":"39.9",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/41/2018/41_05818578227079549_1280.jpg"
+    },
+    {
+        "goodsId":"15",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/10/2019/10_06041626415217053_360.jpg",
+        "title":"攀枝花新鲜夏黑无籽葡萄孕妇水果提子非黑加仑",
+        "price":"52.9",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/10/2019/10_06041627185435768_1280.jpg"
+    },
+    {
+        "goodsId":"16",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/27/2019/27_06122231850672662_360.jpg",
+        "title":"合鑫泰 黑龙江 五常稻花香米",
+        "price":"89.9",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/27/2019/27_06118530794955294_1280.jpg"
+    },
+    {
+        "goodsId":"17",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/229/2019/229_06133229904784852_360.jpg",
+        "title":"十月稻田糯米1kg ",
+        "price":"19.9",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/229/2019/229_06133230086708712_1280.jpg"
+    },
+    {
+        "goodsId":"18",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/229/2019/229_06070955098816504_360.jpg",
+        "title":"2.5kg-十月稻田寒露秋香东北五常大米",
+        "price":"49.9",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/229/2019/229_06070955375693090_1280.jpg"
+    },
+    {
+        "goodsId":"20",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/15/2017/15_05653715322432321_360.jpg",
+        "title":"虾稻桂子米 5KG真空装",
+        "price":"42.9",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/15/2017/15_05626692050301506_1280.jpg"
+    },
+    {
+        "goodsId":"21",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/27/2016/27_05249471564019564_360.jpg",
+        "title":"鲁花 5S压榨一级花生油 5L",
+        "price":"145.9",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/27/2018/27_05923278329106944_1280.jpg"
+    },
+    {
+        "goodsId":"22",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/15/2018/15_05735851907674559_360.jpg",
+        "title":"厨道 花生调和油 5L",
+        "price":"59.9",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/15/2018/15_05960426741506034_1280.jpg"
     },
     {
         "goodsId":"",
         "img":"",
         "title":"",
         "price":"",
-        "sales":"",
-        "fare":"",
-        "left1":"",
-        "left2":"",
-        "left3":"",
-        "detail1":"",
-        "detail2":"",
-        "detail3":""
+        "detail":""
     },
     {
         "goodsId":"",
         "img":"",
         "title":"",
         "price":"",
-        "sales":"",
-        "fare":"",
-        "left1":"",
-        "left2":"",
-        "left3":"",
-        "detail1":"",
-        "detail2":"",
-        "detail3":""
-    },
-    {
-        "goodsId":"",
-        "img":"",
-        "title":"",
-        "price":"",
-        "sales":"",
-        "fare":"",
-        "left1":"",
-        "left2":"",
-        "left3":"",
-        "detail1":"",
-        "detail2":"",
-        "detail3":""
+        "detail":""
     }
 ]
 

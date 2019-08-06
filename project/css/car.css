@@ -1,0 +1,489 @@
+
+
+/* 这是顶部小导航条部分 */
+.s_top{
+	width: 100%;
+	height: 28px;
+	background: #F2F2F2;
+	font-size: 12px;
+	color:#555;
+}
+.s_top .left{
+	float: left;
+	display: flex;
+	height: 27px;
+	line-height: 28px;
+}
+
+.s_top .left li{
+	margin-right:20px;
+}
+.s_top .left li:last-child i{
+	color:#FF861B ;
+}
+.s_top .left li:first-child:hover .dropdown{
+	display: block;
+}
+.s_top .left li:first-child:hover{
+	background: #fff;
+}
+.left .dropdown{
+	padding: 0 10px 10px 10px;
+    width: 390px;
+    position: absolute;
+    top: 27px;
+    left:80px;
+    line-height: 30px;
+    margin-top: 1px;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
+    z-index: 11;
+	zoom: 1;
+	display: none;
+}
+.left .dropdown p{
+	border-bottom: 1px dashed #e5e5e5;
+}
+.left .dropdown .dropcity{
+	display: block;
+    position: relative;
+	line-height: 30px;
+	
+}
+.left .dropdown .dropcity label{
+	float: left;
+    width: 52px;
+    text-align: left;
+    margin-right: 8px;
+    color: #333;
+}
+.left .dropdown .dropcity span{
+	margin-right: 10px;
+    margin-top: 2.5px;
+    display: block;
+    float: left;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+	color: #666;
+}
+
+
+
+.s_top .left li:nth-child(1) .t{
+	font-size: 20px;
+	margin-right: 2px;
+}
+.s_top .left li:nth-child(1) span{
+	margin-left:2px;
+	margin-right: 6px;
+}
+.s_top .left li:nth-child(2) span{
+	margin-left: 4px;
+	margin-right: 4px;
+}
+.s_top .right{
+	float: right;
+	display: flex;
+	height: 27px;
+	line-height: 27px;
+}
+.s_top .right li{
+	margin-left:20px;
+}
+.s_top .right li:first-child i{
+	color: #E60012;
+}
+.right .firstli .dropdown_p{
+	width: 250px;
+	right:350px;
+	padding: 0 10px 10px 10px;
+    position: absolute;
+    top: 27px;
+    line-height: 30px;
+    margin-top: 1px;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
+    z-index: 11;
+	zoom: 1;
+	display: none;
+}
+.right .firstli{
+	padding: 0 10px;
+}
+.right .firstli:hover{
+	background: #fff;
+}
+.right .firstli:hover .dropdown_p{
+	display: block;
+}
+.right .firstli .dropdown_p .dropdown_c{
+	height: auto;
+    padding-top: 10px;
+	border-bottom: 1px dashed #e5e5e5;
+	display: block;
+    position: relative;
+    line-height: 30px;
+}
+.right .firstli .dropdown_p .dropdown_c .item-qrcode{
+	float: left;
+    width: 76px;
+	height: 76px;
+}
+.right .firstli .dropdown_p .dropdown_c .item-qrcode img{
+	width: 75px;
+	height: 75px;
+	vertical-align:middle;
+}
+.right .firstli .dropdown_c .item-info{
+	float: left;
+	padding-left: 10px;
+	line-height: 12px;
+}
+.right .firstli .dropdown_c .item-info p{
+	display: block;
+    /* margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+	margin-inline-end: 0px; */
+	line-height: 18px;
+}
+.right .uli .drop_u{
+	padding: 0 10px 10px 10px;
+    width: 68px;
+    position: absolute;
+    top: 27px;
+    right:254px;
+    line-height: 30px;
+    margin-top: 1px;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
+    z-index: 11;
+	zoom: 1;
+	display: none;
+}
+.right .uli:hover .drop_u{
+	display: block
+}
+.right .uli{
+	padding-left:8px;
+}
+.right .uli:hover{
+	background: white;
+}
+.right .uli .drop_u a{
+	display: block;
+    position: relative;
+	line-height: 30px;
+	cursor: pointer;
+}
+.right .uli .drop_u a span{
+	width: auto;
+    line-height: 30px;
+	margin-right: 0;
+	margin-top: 2.5px;
+    display: block;
+	float: left;
+	height: 25px;
+	text-align: center;
+    cursor: pointer;
+}
+
+
+
+.logo{
+	width: 100%;
+	height: 140px;
+	padding: 30px 0;
+	box-sizing: border-box;
+}
+.logo img{
+	display: inline-block;
+	margin-top:-40px;
+}
+.logo .box{
+	
+	width: 600px;
+	height: 60px;
+	display: inline-block;
+	margin-left: 60px;
+	
+}
+.logo .box .top{
+	width: 600px;
+	position: relative;
+	
+}
+.logo .box .top .mig{
+	position: absolute;
+	color: rgb(218, 213, 213);
+	font-size: 18px;
+	left:8px;
+	top:28px;
+}
+
+.logo .box .top input{
+	box-sizing: border-box;
+	width: 502px;
+	height: 36px;
+	border:2px solid #E60012;
+	margin-top: 20px;
+	line-height: 36px;
+	padding-left:30px;
+	float: left;
+}
+.logo .box .top span{
+	margin-top: 20px;
+	display: block;
+	width: 80px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	font-size: 12px;
+	color: white;
+	background: #E60012;
+	float: left;
+}
+.logo .bottom{
+	box-sizing: border-box;
+	width: 600px;
+	height: 23px;
+	padding:8px 0; 
+}
+.logo .bottom a{
+	float: left;
+	width: 50px;
+	height: 12px;
+	line-height: 12px;
+	font-size: 12px;
+	color: #666;
+	text-align: center;
+	border-right: 1px solid #666;
+}
+.logo .bottom a:first-child{
+	color: black;
+}
+.logo .bottom a:first-child,.logo .bottom a:last-child{
+	border: none;
+}
+.logo .shopcar{
+	width: 150px;
+	height: 36px;
+	box-sizing: border-box;
+	position: absolute;
+	right:100px;;
+	top: 80px;
+}
+.logo .shopcar:hover{
+	background: #CC0212;
+	color: #fff;
+}
+.logo .shopcar:hover .iconfont{
+	color: #fff;
+}
+
+.logo .shopcar:hover a{
+	background: #CC0212;
+	color: #fff;
+}
+.logo .shopcar a{
+	position: relative;
+    display: block;
+    width: 118px;
+    padding: 0 15px;
+    border: 1px solid #e5e5e5;
+    height: 34px;
+    line-height: 34px;
+    background-color: #f9f9f9;
+}
+.logo .shopcar a .iconfont{
+	/* //display: block; */
+	margin-top: 6px;
+	line-height: 27px;
+	position: relative;
+    width: 32px;
+	height: 24px;
+	font-size: 24px;
+	color: #666;
+	
+}
+.logo .shopcar a .iconfont #carcount{
+	position: absolute;
+    top: -17px;
+    left: 17px;
+    padding: 3px;
+    line-height: 10px;
+    border-radius: 3px;
+    text-align: center;
+	color: #fff;
+	font-size: 14px;
+    background-color: #e60012;
+}
+.logo .shopcar a .text{
+	font-size: 14px;
+
+}
+
+/* <!-- 一级二级菜单 --> */
+.s_menu{
+	width: 100%;
+	height:38px; 
+	display: flex;
+}
+.s_menu span{
+	position: relative;
+	display: inline-block;
+}
+.s_menu>span .num11{
+	display: inline-block;
+	width: 190px;
+	height: 38px;
+	font-size: 16px;
+	line-height: 38px;
+	text-align: center;
+	background: #CC0212;
+	color: #fff;
+}
+.s_menu span .num22,.s_menu span .num33{
+	display: inline-block;
+	width: 110px;
+	height: 38px;
+	font-size: 16px;
+	line-height: 38px;
+	text-align: center;
+	font-style: normal;
+}
+.s_menu span .num33{
+	color: #CC0212;
+}
+
+/* 中间部分 */
+table {
+	text-align: center;
+	border: 1px solid rgba(216, 213, 213,0.6);
+	margin-top: 40px;
+}
+
+table img {
+	width: 100px;
+	height: 100px;
+}
+table tbody{
+	border: 1px solid rgba(216, 213, 213,0.6);
+}
+
+h3{
+	padding: 5px;
+	width: 160px;
+	height: 30px;
+	border-radius: 10px;
+	line-height: 30px;
+	background: rgba(146, 143, 143, 0.2);
+	color: #333;
+	margin:20px auto;
+	font-size: 18px;
+	font-weight: normal;
+	text-align: center;
+	margin-bottom: 0;
+	display: inline-block;
+	border: 2px solid rgba(146, 143, 143);
+	margin:20px 250px;
+	
+}
+.two{
+	margin: 5px auto;
+	cursor: pointer;
+}
+.two:hover{
+	background: lightpink;
+}
+
+
+/* 这是底部 */
+.lastbottom{
+	width: 100%;
+	background: #F8F8F8;
+	padding-bottom: 50px;
+}
+.lastbottom .b1{
+	width: 100%;
+}
+.lastbottom .b1 img{
+	width: 100%;
+	border-bottom: 1px solid rgba(146, 143, 143, 0.2);
+}
+
+.lastbottom .b2{
+	width: 100%;
+	height: 154px;
+	box-sizing: border-box;
+	padding:20px 0;
+}
+.lastbottom .b2 .wechat img{
+	width:100px;
+	height: 89px;
+}
+.lastbottom .b2 .wechat{
+	display: flex;
+	flex-direction: column;
+	float: left;
+}
+.lastbottom .b2 .webo{
+	width: 100px;
+	display: flex;
+	flex-direction: column;
+	float: right;
+}
+.lastbottom .b2 .webo img{
+	width: 100px;
+	height: 100px;
+}
+.lastbottom .b3{
+	width: 100%;
+}
+.lastbottom .b3 ul{
+	width: 100%;
+	text-align: center;
+}
+.lastbottom .b3 ul li{
+    line-height: 12px;
+    display: inline;
+    border-left: 1px
+}
+.lastbottom .b3 ul li a{
+	border-left: 1px solid #999;
+    height: 12px;
+    padding: 0 25px;
+    line-height: 12px;
+	font-size: 12px;
+	cursor: pointer;
+    color: #666;
+}
+.lastbottom .b3 ul li a:hover{
+	color: #333;
+}
+.lastbottom .b3 ul li:first-child a{
+	border: none;
+}
+
+.lastbottom .b3 p{
+	height: 24px;
+    line-height: 24px;
+	text-align: center;
+	margin: 5px 0;
+	font-family: "宋体";
+	color: #666;
+	font-size: 12px;
+}
+.lastbottom .b4{
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
