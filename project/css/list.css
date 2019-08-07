@@ -352,12 +352,14 @@
       .listscontent .c_right .p_lists ul {
         width: 100%;
         height: 100%;
-        display: flex; }
+        display: flex; 
+        flex-wrap: wrap;}
         .listscontent .c_right .p_lists ul li {
           width: 228px;
           border: 1px solid #cccccc;
           margin-top: 10px;
           margin-left: 12px;
+          position: relative;
           overflow: hidden;
           background: white; }
           .listscontent .c_right .p_lists ul li .goodimg {
@@ -366,6 +368,19 @@
             overflow: hidden;
             position: relative;
             margin: auto; }
+            .listscontent .c_right .p_lists ul li .carbtn {
+              width: 228px;
+              height:26px;
+              line-height: 26px;
+              text-align: center;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              display: none;}
+              .listscontent .c_right .p_lists ul li:hover .carbtn{
+                display: block;
+                background: #FF0000;
+                color: #fff;}
             .listscontent .c_right .p_lists ul li .goodimg:hover a img {
               transform: scale(1.1); }
             .listscontent .c_right .p_lists ul li .goodimg a {
@@ -396,7 +411,7 @@
               font-size: 18px;
               color: #FF0000;
               float: left !important; }
-              .listscontent .c_right .p_lists ul li .gprice .now .before {
+              .listscontent .c_right .p_lists ul li .gprice .before {
                 text-decoration: line-through;
                 font-size: 15px;
                 color: #999;

@@ -53,21 +53,21 @@
         "goodsId":"8",
         "img":"http://www.hangowa.com/data/upload/shop/store/goods/238/2019/238_06150364566155086_360.jpg",
         "title":"新疆天润奶啤酸奶含乳酸菌牛奶饮料",
-        "price":"66.8",
+        "price":"66.0",
         "detail":"http://www.hangowa.com/data/upload/shop/store/goods/238/2019/238_06150364434124866_1280.png"
     },
     {
         "goodsId":"10",
         "img":"http://www.hangowa.com/data/upload/shop/store/goods/15/2019/15_06058022446225494_360.jpg",
         "title":"农谷鲜 新鲜散养农家土鸡蛋",
-        "price":"26.5",
+        "price":"26.0",
         "detail":"http://www.hangowa.com/data/upload/shop/store/goods/15/2018/15_05991345462436102_1280.jpg"
     },
     {
         "goodsId":"11",
         "img":"http://www.hangowa.com/data/upload/shop/store/goods/41/2018/41_05818578862919515_360.jpg",
         "title":"一苇农佳 秭归脐橙夏橙",
-        "price":"42.9",
+        "price":"42.0",
         "detail":"http://www.hangowa.com/data/upload/shop/store/goods/41/2018/41_05818578227079549_1280.jpg"
     },{
         "goodsId":"12",
@@ -80,71 +80,64 @@
         "goodsId":"14",
         "img":"http://www.hangowa.com/data/upload/shop/store/goods/41/2018/41_05818583086201462_360.jpg",
         "title":"一苇农佳 秭归脐橙 5斤装",
-        "price":"39.9",
+        "price":"39.0",
         "detail":"http://www.hangowa.com/data/upload/shop/store/goods/41/2018/41_05818578227079549_1280.jpg"
     },
     {
         "goodsId":"15",
         "img":"http://www.hangowa.com/data/upload/shop/store/goods/10/2019/10_06041626415217053_360.jpg",
         "title":"攀枝花新鲜夏黑无籽葡萄孕妇水果提子非黑加仑",
-        "price":"52.9",
+        "price":"52.0",
         "detail":"http://www.hangowa.com/data/upload/shop/store/goods/10/2019/10_06041627185435768_1280.jpg"
     },
     {
         "goodsId":"16",
         "img":"http://www.hangowa.com/data/upload/shop/store/goods/27/2019/27_06122231850672662_360.jpg",
         "title":"合鑫泰 黑龙江 五常稻花香米",
-        "price":"89.9",
+        "price":"89.0",
         "detail":"http://www.hangowa.com/data/upload/shop/store/goods/27/2019/27_06118530794955294_1280.jpg"
     },
     {
         "goodsId":"17",
         "img":"http://www.hangowa.com/data/upload/shop/store/goods/229/2019/229_06133229904784852_360.jpg",
         "title":"十月稻田糯米1kg ",
-        "price":"19.9",
+        "price":"19.0",
         "detail":"http://www.hangowa.com/data/upload/shop/store/goods/229/2019/229_06133230086708712_1280.jpg"
     },
     {
         "goodsId":"18",
         "img":"http://www.hangowa.com/data/upload/shop/store/goods/229/2019/229_06070955098816504_360.jpg",
         "title":"2.5kg-十月稻田寒露秋香东北五常大米",
-        "price":"49.9",
+        "price":"49.0",
         "detail":"http://www.hangowa.com/data/upload/shop/store/goods/229/2019/229_06070955375693090_1280.jpg"
     },
     {
         "goodsId":"20",
         "img":"http://www.hangowa.com/data/upload/shop/store/goods/15/2017/15_05653715322432321_360.jpg",
         "title":"虾稻桂子米 5KG真空装",
-        "price":"42.9",
+        "price":"42.0",
         "detail":"http://www.hangowa.com/data/upload/shop/store/goods/15/2017/15_05626692050301506_1280.jpg"
     },
     {
         "goodsId":"21",
         "img":"http://www.hangowa.com/data/upload/shop/store/goods/27/2016/27_05249471564019564_360.jpg",
         "title":"鲁花 5S压榨一级花生油 5L",
-        "price":"145.9",
+        "price":"145.0",
         "detail":"http://www.hangowa.com/data/upload/shop/store/goods/27/2018/27_05923278329106944_1280.jpg"
     },
     {
         "goodsId":"22",
         "img":"http://www.hangowa.com/data/upload/shop/store/goods/15/2018/15_05735851907674559_360.jpg",
         "title":"厨道 花生调和油 5L",
-        "price":"59.9",
+        "price":"59.0",
         "detail":"http://www.hangowa.com/data/upload/shop/store/goods/15/2018/15_05960426741506034_1280.jpg"
     },
     {
-        "goodsId":"",
-        "img":"",
-        "title":"",
-        "price":"",
-        "detail":""
-    },
-    {
-        "goodsId":"",
-        "img":"",
-        "title":"",
-        "price":"",
-        "detail":""
+        "goodsId":"23",
+        "img":"http://www.hangowa.com/data/upload/shop/store/goods/202/2018/202_05854346774067954_360.jpg",
+        "title":"伍家台贡茶精品礼茶",
+        "price":"238",
+        "detail":"http://www.hangowa.com/data/upload/shop/store/goods/202/2018/202_05865416545103252_1280.jpg"
     }
 ]
 

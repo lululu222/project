@@ -1,5 +1,6 @@
 class Register{
     constructor(){
+        this.url = "http://api.icodeilife.cn:81/user";
         this.username=document.getElementById("username");
         this.pass=document.getElementById("pass");
         this.pass2=document.getElementById("pass2");
@@ -7,6 +8,7 @@ class Register{
         this.btn=document.getElementById("register_btn");
         this.ouser=this.opass=this.opass2=this.otel=this.ocheck=false;
         this.check=document.getElementById("check");
+        this.alertbox=document.querySelector(".alertbox");
         this.addEvent();
         this.checkverify();
     }
@@ -23,6 +25,9 @@ class Register{
         }
         this.tel.onblur=function(){
             that.telverify();
+        }
+        this.btn.onclick=function(){
+            that.register();
         }
 
 
@@ -80,11 +85,51 @@ class Register{
     checkverify(){
         if(this.check.getAttribute("checked")==1){
             this.ocheck=true;
-            console.log(11);
         }else{
             this.ocheck=false;
         }
     }
+    register(){
+        var that=this;
+        if(this.ocheck=this.opass=this.ouser=this.opass2=this.otel=true){
+            this.btn.onclick=function(){
+                that.load();
+            }
+           
+        }else{
+            this.btn.onclick=function(){
+                this.alertbox.innerHTML="信息有误，请重新填写";
+            }
+        }
+    }
+    load(){
+        var that=this;
+         //先去ajax请求发送相关信息
+         ajax({
+            url:this.url,
+            data:{
+                type:"register",
+                user:this.username.value,
+                pass:this.pass.value,
+                tel:this.tel.value
+            },
+            success:function(res){
+                res=JSON.parse(res);
+                if(res.code == 0){
+                    that.alertbox.innerHTML="用户名重复";
+                }else if(res.code == 1){
+                    that.alertbox.innerHTML="注册成功，3秒后跳转";
+                    setTimeout(()=>{
+                        location.href="login.html";
+                    },3000);
+                }
+            }
+
+        })
+
+        //再去跳转页面
+    }
+
     
 
 

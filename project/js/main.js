@@ -1,8 +1,8 @@
 require.config({
     baseUrl:"model",
     paths:{
-        tab:"tab",
-        jq:"../libs/js/jquery.1.12.4.js"
+        tab:"http://127.0.0.1/js%20project/project/model/tab.js",
+        jq:"http://127.0.0.1/js%20project/project/libs/js/jquery.1.12.4.js"
     }
 })
 

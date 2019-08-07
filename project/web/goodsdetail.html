@@ -154,7 +154,7 @@
                 </div>
             </div>
             <div class="shopcar">
-                <a href="##">
+                <a href="car.html">
                     <i class="iconfont">
                         &#xe726;
                         <span id="carcount">0</span>
@@ -194,7 +194,8 @@
                             title="Фото">
                     </div>
                     <div class="imgths clearfix">
-                        <img id="imgsmall" src="http://lyzbjbx.oss-cn-hangzhou.aliyuncs.com/lyzbjbxgo/shop/113/gallery/2018/07/04/15306758619771.jpg"
+                        <img id="imgsmall"
+                            src="http://lyzbjbx.oss-cn-hangzhou.aliyuncs.com/lyzbjbxgo/shop/113/gallery/2018/07/04/15306758619771.jpg"
                             alt="">
                     </div>
                     <div class="user_handle">
@@ -238,7 +239,7 @@
                             </div>
                             <div class="goodbtn">
                                 <input type="button" name="" id="" value="立即购买">
-                                <input type="button" value="加入购物车">
+                                <input type="button" value="加入购物车" id="buycar">
                             </div>
 
                         </div>
@@ -274,7 +275,8 @@
                     中华名果 巫山脆李 质地脆嫩汁多味美 重庆范围内包邮 3斤
                 </div>
                 <div class="tab_img">
-                    <img id="imgdetail" src="http://lyzbimage.jbxgo.com/lyzbjbxgo/shop/113/gallery/2018/07/04/15306762968519.jpg"
+                    <img id="imgdetail"
+                        src="http://lyzbimage.jbxgo.com/lyzbjbxgo/shop/113/gallery/2018/07/04/15306762968519.jpg"
                         alt="">
                 </div>
             </div>
@@ -288,12 +290,13 @@
 
     </div>
 
-    
+
 </body>
 <script src="../libs/js/jquery.1.12.4.js"></script>
 <script src="../libs/js/jquery-1.11.0.min.js"></script>
 <script src="../libs/js/zoomsl.min.js"></script>
 <script src="../js/ajax.3.0.js"></script>
+<script src="../js/cookie.js"></script>
 <script>
     //ajax请求数据  load加载局部页面
     $(".lastbottom").load("public/bottom.html");
@@ -305,39 +308,71 @@
 
         $(".my-foto").imagezoomsl({
 
-            zoomrange: [1,6]
+            zoomrange: [1, 6]
         });
-    });   
+    });
 
 
 
-
-    var goodsname=document.getElementById("goodname");
-    var goodsprice=document.getElementById("price");
+    var buycar = document.getElementById("buycar");
+    var goodsname = document.getElementById("goodname");
+    var goodsprice = document.getElementById("price");
     // 要设置两个属性
-    var goodsimgb=document.getElementById("imgbig");
-    var goodsimgs=document.getElementById("imgsmall");
+    var goodsimgb = document.getElementById("imgbig");
+    var goodsimgs = document.getElementById("imgsmall");
     //详情
-    var detailimg=document.getElementById("imgdetail")
-    onload=function(){
-        var goodsid=window.location.href;
+    var detailimg = document.getElementById("imgdetail")
+    onload = function () {
+        var goodsid = window.location.href;
         //这是商品唯一标识性的id，在数据库中叫goodsId
-        var id=goodsid.split("?")[1];
+        var id = goodsid.split("?")[1];
         //console.log(id);
         ajax({
-            type:"get",
-            url:"http://127.0.0.1/js%20project/project/data/goods.json",
-            success:function(res){
-                var res=JSON.parse(res);
-                for(var i=0;i<res.length;i++){
-                    console.log(res[i].goodsId)
-                    if(res[i].goodsId == id){
-                        goodsimgb.setAttribute("src",`${res[i].img}`);
-                        goodsimgb.setAttribute("data-large",`${res[i].img}`);
-                        goodsimgs.setAttribute("src",`${res[i].img}`);
-                        goodsname.innerHTML=`${res[i].title}`;
-                        goodsprice.innerHTML=`${res[i].price}`;
-                        detailimg.setAttribute("src",`${res[i].detail}`);
+            type: "get",
+            url: "http://127.0.0.1/js%20project/project/data/goods.json",
+            success: function (res) {
+                var res = JSON.parse(res);
+                for (var i = 0; i < res.length; i++) {
+                    // console.log(res[i].goodsId);
+                    if (res[i].goodsId == id) {
+                        var Id=res[i].goodsId;
+                        goodsimgb.setAttribute("src", `${res[i].img}`);
+                        goodsimgb.setAttribute("data-large", `${res[i].img}`);
+                        goodsimgs.setAttribute("src", `${res[i].img}`);
+                        goodsname.innerHTML = `${res[i].title}`;
+                        goodsprice.innerHTML = `${res[i].price}`;
+                        detailimg.setAttribute("src", `${res[i].detail}`);
+                        buycar.onclick = function () {
+                           
+                            //var Id = goodsId;
+                            thisgoods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
+                            //购物车为空直接存
+                            if (thisgoods.length == 0) {
+                                thisgoods.push({
+                                    id: Id,
+                                    num: 1
+                                })
+                            } else {
+                                //购物车不为空，判断是新商品还是旧商品
+                                var i = 0;
+                                var onoff = thisgoods.some((val, index) => {
+                                    i = index;
+                                    return val.id == Id;
+                                })
+                                //旧商品增加数量
+                                if (onoff) {
+                                    thisgoods[i].num == thisgoods[i].num;
+                                } else {
+                                    //新商品直接存
+                                    thisgoods.push({
+                                        id: Id,
+                                        num: 1
+                                    })
+                                }
+                            }
+                            //2.4最后设置cookie
+                            setCookie("goods", JSON.stringify(thisgoods));
+                        }
                     }
                 }
             }

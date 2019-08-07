@@ -63,9 +63,9 @@
                     </div>
                 </li>
                 <li>
-                    <a href="" class="s_login">登录</a>
+                    <a href="login.html" class="s_login">登录</a>
                     <span>|</span>
-                    <a href="" class="s_register">注册</a>
+                    <a href="register.html" class="s_register">注册</a>
                 </li>
                 <li>
                     <i class="iconfont">&#xe61e;</i>
@@ -173,8 +173,8 @@
         <div class="s_menu">
             <span>
                 <a href="" class="num11">全部商品分类</a>
-                <a href="" class="num22 active">首页</a>
-                <a href="" class="num33">所有商品</a>
+                <a href="index.html" class="num22 active">首页</a>
+                <a href="list.html" class="num33">所有商品</a>
             </span>
 
         </div>
@@ -275,6 +275,7 @@
                     this.goods[i].num = this.num;
                 }
             }
+            
             setCookie("goods", JSON.stringify(this.goods));
             //重新渲染页面（总价）
             this.display();

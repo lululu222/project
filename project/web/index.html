@@ -556,7 +556,7 @@
                     </li>
                 </ul>
                 <a href="" class="num22 active">首页</a>
-                <a href="" class="num33">所有商品</a>
+                <a href="list.html" class="num33">所有商品</a>
             </span>
 
         </div>
@@ -583,16 +583,16 @@
                     <img src="../data/images/user.jpg" alt="">
                 </div>
                 <div class="login_info">
-                    <div class="say">
+                    <div class="say" id="usersayhello">
                         hi!欢迎来到集食惠
                     </div>
                     <div class="lbtn">
                         <span class="userlogin">
                             <a href="login.html">登录</a>
                         </span>
-                        <span class="userregister">
-                            <a href="register.html">
-                                注册
+                        <span class="userregister" id="backuser">
+                            <a href="##">
+                                注销
                             </a>
                         </span>
 
@@ -603,7 +603,7 @@
                         <li>
                             <img src="http://www.hangowa.com/shop/templates/default/images/shop/01_login_icon.png"
                                 alt="">
-                            <a href="##">登录注册</a>
+                            <a href="login.html">登录注册</a>
                         </li>
                         <li>
                             <img src="http://www.hangowa.com/shop/templates/default/images/shop/02_mine_icon.png"
@@ -673,7 +673,7 @@
                             <span class="before">￥39.0</span>
                         </div>
                     </div>
-                    <div class="cartext">点击加入购物车</div>
+                    <div class="recommend cartext">点击加入购物车</div>
                 </li>
                 <li id="5">
                     <div class="goodimg">
@@ -691,7 +691,7 @@
                             <span class="before">￥398.0</span>
                         </div>
                     </div>
-                    <div class="cartext">点击加入购物车</div>
+                    <div class="recommend cartext">点击加入购物车</div>
                 </li>
                 <li id="6">
                     <div class="goodimg">
@@ -709,7 +709,7 @@
                             <span class="before">￥428.0</span>
                         </div>
                     </div>
-                    <div class="cartext">点击加入购物车</div>
+                    <div class="recommend cartext">点击加入购物车</div>
                 </li>
                 <li id="7">
                     <div class="goodimg">
@@ -727,7 +727,7 @@
                             <span class="before">￥78.0</span>
                         </div>
                     </div>
-                    <div class="cartext">点击加入购物车</div>
+                    <div class="recommend cartext">点击加入购物车</div>
                 </li>
                 <li id="8">
                     <div class="goodimg">
@@ -745,7 +745,7 @@
                             <span class="before">￥88.0</span>
                         </div>
                     </div>
-                    <div class="cartext">点击加入购物车</div>
+                    <div class="recommend cartext">点击加入购物车</div>
                 </li>
 
             </div>
@@ -976,7 +976,7 @@
                 <p>购</p>
                 <p>物</p>
                 <p>车</p>
-                <h5 id="h5num">0</h5>
+                <h5 id="h5num" style="background:#FF0000;font-size:18px;width:30px;height: 30px;margin-left:3px;margin-top:3px;line-height: 30px;border-radius: 50%;color: #fff;">0</h5>
                 </a>
             </div>
             <div class="like">
@@ -1048,13 +1048,14 @@
                         </div>
                     </div>
                     <div class="right_side clearfix">
-                        <div class="f_img1">
+                        <div class="f_img1" id="10">
                             <a href="" id="10" class="alla">
                                 <img src="http://www.hangowa.com/data/upload/shop/editor/web-1-18-2.jpg?413" alt="">
                             </a>
+                            <div class="relativecar cartext">点击加入购物车</div>
                         </div>
                         <li>
-                            <dl>
+                            <dl id="11">
                                 <dd class="goodsig"><a href="" id="11" class="alla"><img
                                             src="http://www.hangowa.com/data/upload/shop/store/goods/41/2018/41_05818578862919515_240.jpg"
                                             alt=""></a></dd>
@@ -1063,10 +1064,11 @@
                                     <span class="now">￥42.90</span>
                                     <span class="before">￥39.90</span>
                                 </dd>
+                                <div class="relativecarsmall cartext">点击加入购物车</div>
                             </dl>
                         </li>
                         <li>
-                            <dl>
+                            <dl id="12">
                                 <dd class="goodsig"><a href="" id="12" class="alla"><img
                                             src="http://www.hangowa.com/data/upload/shop/store/goods/41/2018/41_05823046628935574_240.jpg"
                                             alt=""></a></dd>
@@ -1075,10 +1077,11 @@
                                     <span class="now">￥30.00</span>
                                     <span class="before">￥35.90</span>
                                 </dd>
+                                <div class="relativecarsmall cartext">点击加入购物车</div>
                             </dl>
                         </li>
                         <li>
-                            <dl>
+                            <dl id="13">
                                 <dd class="goodsig"><a href="" id="13" class="alla"><img
                                             src="http://www.hangowa.com/data/upload/shop/store/goods/41/2018/41_05842715329287940_240.jpg"
                                             alt=""></a></dd>
@@ -1087,10 +1090,11 @@
                                     <span class="now">￥55.90</span>
                                     <span class="before">￥66.90</span>
                                 </dd>
+                                <div class="relativecarsmall cartext">点击加入购物车</div>
                             </dl>
                         </li>
                         <li>
-                            <dl>
+                            <dl id="14">
                                 <dd class="goodsig"><a href="" id="14" class="alla"><img
                                             src="http://www.hangowa.com/data/upload/shop/store/goods/41/2018/41_05818583086201462_240.jpg"
                                             alt=""></a></dd>
@@ -1099,12 +1103,14 @@
                                     <span class="now">￥39.90</span>
                                     <span class="before">￥33.90</span>
                                 </dd>
+                                <div class="relativecarsmall cartext">点击加入购物车</div>
                             </dl>
                         </li>
-                        <div class="f_img2">
+                        <div class="f_img2" id="15">
                             <a href="" id="15" class="alla">
                                 <img src="http://www.hangowa.com/data/upload/shop/editor/web-1-18-3.jpg?608" alt="">
                             </a>
+                            <div class="relativecar cartext">点击加入购物车</div>
                         </div>
                     </div>
                 </div>
@@ -1135,13 +1141,14 @@
                         </div>
                     </div>
                     <div class="right_side clearfix">
-                        <div class="f_img1">
+                        <div class="f_img1" id="16">
                             <a href="" id="16" class="alla">
                                 <img src="http://www.hangowa.com/data/upload/shop/editor/web-5-58-2.jpg?137" alt="">
                             </a>
+                            <div class="relativecar cartext">点击加入购物车</div>
                         </div>
                         <li>
-                            <dl>
+                            <dl id="17">
                                 <dd class="goodsig"><a href="" id="17" class="alla"><img
                                             src="http://www.hangowa.com/data/upload/shop/store/goods/229/2019/229_06133229904784852_360.jpg"
                                             alt=""></a></dd>
@@ -1150,10 +1157,11 @@
                                     <span class="now">￥19.90</span>
                                     <span class="before">￥19.90</span>
                                 </dd>
+                                <div class="relativecarsmall cartext">点击加入购物车</div>
                             </dl>
                         </li>
                         <li>
-                            <dl>
+                            <dl id="18">
                                 <dd class="goodsig"><a href="" id="18" class="alla"><img
                                             src="http://www.hangowa.com/data/upload/shop/store/goods/229/2019/229_06070955098816504_360.jpg"
                                             alt=""></a></dd>
@@ -1162,10 +1170,11 @@
                                     <span class="now">￥49.90</span>
                                     <span class="before">￥39.90</span>
                                 </dd>
+                                <div class="relativecarsmall cartext">点击加入购物车</div>
                             </dl>
                         </li>
                         <li>
-                            <dl>
+                            <dl id="20">
                                 <dd class="goodsig"><a href="" id="20" class="alla"><img
                                             src="http://www.hangowa.com/data/upload/shop/store/goods/15/2017/15_05653715322432321_360.jpg"
                                             alt=""></a></dd>
@@ -1175,9 +1184,10 @@
                                     <span class="before">￥39.90</span>
                                 </dd>
                             </dl>
+                            <div class="relativecarsmall cartext">点击加入购物车</div>
                         </li>
                         <li>
-                            <dl>
+                            <dl id="22">
                                 <dd class="goodsig"><a href="" id="22" class="alla"><img
                                             src="http://www.hangowa.com/data/upload/shop/store/goods/15/2018/15_05735851907674559_360.jpg"
                                             alt=""></a></dd>
@@ -1186,12 +1196,14 @@
                                     <span class="now">￥20.60</span>
                                     <span class="before">￥25.90</span>
                                 </dd>
+                                <div class="relativecarsmall cartext">点击加入购物车</div>
                             </dl>
                         </li>
-                        <div class="f_img2">
+                        <div class="f_img2" id="21">
                             <a href="" id="21" class="alla">
                                 <img src="http://www.hangowa.com/data/upload/shop/editor/web-5-58-3.jpg?704" alt="">
                             </a>
+                            <div class="relativecar cartext">点击加入购物车</div>
                         </div>
                     </div>
                 </div>

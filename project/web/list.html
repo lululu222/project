@@ -63,9 +63,9 @@
                     </div>
                 </li>
                 <li>
-                    <a href="" class="s_login">登录</a>
+                    <a href="login.html" class="s_login">登录</a>
                     <span>|</span>
-                    <a href="" class="s_register">注册</a>
+                    <a href="register.html" class="s_register">注册</a>
                 </li>
                 <li>
                     <i class="iconfont">&#xe61e;</i>
@@ -154,7 +154,7 @@
                 </div>
             </div>
             <div class="shopcar">
-                <a href="##">
+                <a href="car.html">
                     <i class="iconfont">
                         &#xe726;
                         <span id="carcount">0</span>
@@ -173,8 +173,8 @@
         <div class="s_menu">
             <span>
                 <a href="" class="num11">全部商品分类</a>
-                <a href="" class="num22 active">首页</a>
-                <a href="" class="num33">所有商品</a>
+                <a href="index.html" class="num22 active">首页</a>
+                <a href="list.html" class="num33">所有商品</a>
             </span>
 
         </div>
@@ -210,7 +210,7 @@
                     </div>
                 </div>
                 <div class="p_lists">
-                    <ul>
+                    <ul id="goodslistbox">
                         <li>
                             <div class="goodimg">
                                 <a href="">
@@ -228,57 +228,8 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="goodimg">
-                                <a href="">
-                                    <img src="http://www.hangowa.com/data/upload/shop/store/goods/229/2019/229_06058844010817613_240.png"
-                                        alt="">
-                                </a>
-                            </div>
-                            <div class="goodcontent">
-                                <div class="gname">
-                                    <a href="">东北大米 十月稻田 寒露秋香长粒香米2.5kg</a>
-                                </div>
-                                <div class="gprice">
-                                    <span class="now">￥29.0</span>
-                                    <span class="before">￥39.0</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="goodimg">
-                                <a href="">
-                                    <img src="http://www.hangowa.com/data/upload/shop/store/goods/229/2019/229_06058844010817613_240.png"
-                                        alt="">
-                                </a>
-                            </div>
-                            <div class="goodcontent">
-                                <div class="gname">
-                                    <a href="">东北大米 十月稻田 寒露秋香长粒香米2.5kg</a>
-                                </div>
-                                <div class="gprice">
-                                    <span class="now">￥29.0</span>
-                                    <span class="before">￥39.0</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="goodimg">
-                                <a href="">
-                                    <img src="http://www.hangowa.com/data/upload/shop/store/goods/229/2019/229_06058844010817613_240.png"
-                                        alt="">
-                                </a>
-                            </div>
-                            <div class="goodcontent">
-                                <div class="gname">
-                                    <a href="">东北大米 十月稻田 寒露秋香长粒香米2.5kg</a>
-                                </div>
-                                <div class="gprice">
-                                    <span class="now">￥29.0</span>
-                                    <span class="before">￥39.0</span>
-                                </div>
-                            </div>
-                        </li>
+                       
+                        
                     </ul>
                 </div>
             </div>
@@ -291,8 +242,118 @@
     <div class="lastbottom"></div>
 </body>
 <script src="../libs/js/jquery.1.12.4.js"></script>
+<script src="../js/ajax.3.0.js"></script>
+<script src="../js/cookie.js"></script>
 <script>
-    $(".lastbottom").load("public/bottom.html")
+    $(".lastbottom").load("public/bottom.html");
+
+    // 请求数据渲染页面
+    class Lists {
+        constructor() {
+            //获取元素
+            this.cont= document.querySelector("#goodslistbox");
+
+            this.topcount=document.getElementById("carcount");
+            //1.ajax请求数据，拿到数据渲染页面
+            this.load();
+            //2.绑定事件
+            this.addEvent();
+        }
+        addEvent() {
+            var that = this;
+            //2.1通过事件监听绑定事件
+            this.cont.addEventListener("click", function (eve) {
+                if (eve.target.className == "carbtn") {
+                    //2.2找到真正的点击元素，获取到具有唯一标示性的属性，存储到cookie中
+                    that.id = eve.target.parentNode.getAttribute("qwe");
+                    that.setCookie();
+                    that.load();
+                }
+            })
+        }
+        setCookie() {
+            //2.3规划数据格式并且判断该以什么方式存
+            this.goods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
+            //购物车为空直接存
+            if (this.goods.length == 0) {
+                this.goods.push({
+                    id: this.id,
+                    num: 1
+                })
+            } else {
+                //购物车不为空，判断是新商品还是旧商品
+                var i = 0;
+                var onoff = this.goods.some((val, index) => {
+                    i = index;
+                    return val.id == this.id;
+                })
+                //旧商品增加数量
+                if (onoff) {
+                    this.goods[i].num++;
+                } else {
+                    //新商品直接存
+                    this.goods.push({
+                        id: this.id,
+                        num: 1
+                    })
+                }
+            }
+            //2.4最后设置cookie
+            setCookie("goods", JSON.stringify(this.goods));
+        }
+        //1.1请求数据
+        load() {
+            var that = this;
+            ajax({
+                type:"post",
+                url:"http://127.0.0.1/js%20project/project/data/goods.json",
+                success:function(res){
+                    that.res = JSON.parse(res);
+                    //1.2拿到数据渲染页面
+                     that.display();
+                }
+            })
+
+
+        }
+        display() {
+            //1.3循环遍历，将数据插入到页面中
+            var str = "";
+            for (var i = 0; i < this.res.length; i++) {
+                str += ` <li qwe="${this.res[i].goodsId}">
+                            <div class="goodimg">
+                                <a href="">
+                                    <img src="${this.res[i].img}"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="goodcontent">
+                                <div class="gname">
+                                    <a href="">${this.res[i].title}</a>
+                                </div>
+                                <div class="gprice">
+                                    <span class="now">${this.res[i].price}</span>
+                                    <span class="before">￥39.0</span>
+                                </div>
+                            </div>
+                            <div class="carbtn">点击加入购物车</div>
+                        </li>`;
+            }
+            this.cont.innerHTML = str;
+            var carnum=JSON.parse(getCookie("goods")).length;
+            this.topcount.innerHTML=carnum;
+
+        }
+
+    }
+    new Lists();
+
+
+
+
+
+
+
 </script>
 
 </html>

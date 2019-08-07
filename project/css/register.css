@@ -179,6 +179,14 @@
     box-sizing: border-box;
     
 }
+.inner_box .tablesinner .alertbox{
+    width: 398px;
+    height: 42px;
+    text-align: center;
+    color: #F32613;
+    margin-top: 10px;
+    font-size: 12px;
+}
 .inner_right{
     float: left;
     width:160px;

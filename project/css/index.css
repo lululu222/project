@@ -664,7 +664,7 @@ img{
 .c_Recom .glist li{
 	position: relative;
 }
-.c_Recom .glist li .cartext{
+.c_Recom .glist li .recommend{
 	width: 100%;
 	height:30px;
 	line-height: 30px;
@@ -673,7 +673,7 @@ img{
 	color: #999;
 	background: rgba(218, 213, 213,0.7);
 }
-.c_Recom .glist li .cartext:hover{
+.c_Recom .glist li .recommend:hover{
 	background: #E60012;
 	color: #fff;
 }
@@ -1006,17 +1006,37 @@ img{
 	width: 440px;
     height: 221px;
     float: left;
-    overflow: hidden;
+	overflow: hidden;
+	position: relative;
     background: #fff;
     border-left: 1px solid rgba(204,204,204,1);
     border-top: 1px solid rgba(204,204,204,1);
 }
+.f_middle .right_side .f_img1 .relativecar,.f_middle .right_side .f_img2 .relativecar{
+	width: 445px;
+	height: 26px;
+	font-size: 16px;
+	line-height: 26px;
+	position: absolute;
+	text-align: center;
+	left: 0;
+	bottom: 0;
+	cursor: pointer;
+	display: none;
+}
+.f_middle .right_side .f_img1:hover .relativecar,.f_middle .right_side .f_img2:hover .relativecar{
+	background: #E60012;
+	color: white;
+	display: block;
+}
+
 .f_middle .right_side .f_img2{
 	width: 440px;
     height: 221px;
     float: left;
     overflow: hidden;
-    background: #fff;
+	background: #fff;
+	position: relative;
     border-right: 1px solid rgba(204,204,204,1);
     border-bottom: 1px solid rgba(204,204,204,1);
 }
@@ -1027,12 +1047,28 @@ img{
 	transform: scale(1.06);
 }
 .f_middle .right_side li{
+	position: relative;
 	float: left;
     overflow: hidden;
     width: 220px;
     height: 222px;
     border: 1px solid rgba(204,204,204,1);
     box-sizing: border-box;
+}
+.f_middle .right_side li .relativecarsmall{
+	width: 218px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: none;
+}
+.f_middle .right_side li:hover .relativecarsmall{
+	display: block;
+	background: #E60012;
+	color: #fff;
 }
 .f_middle .right_side li dl{
 	width: 100%;
