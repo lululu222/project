@@ -75,20 +75,25 @@ for (var i = 0; i < alla.length; i++) {
 
 
 //加载部分
-onload = function () {
-  var msg = localStorage.getItem("loginUser");
-  if (msg) {
-    $("#usersayhello").html(`hi，欢迎${JSON.parse(msg).user}用户`);
-  }
-  $("#backuser").click(function () {
-    localStorage.removeItem("loginUser");
-    $("#usersayhello").html(`hi，欢迎来到集食惠`);
-  })
-  let topcount = document.getElementById("h5num");
-  var carnum = JSON.stringify(getCookie("goods")).length;
-  topcount.innerHTML = carnum;
+// onload = function () {
+//   var msg = localStorage.getItem("loginUser");
+//   if (msg) {
+//     $("#usersayhello").html(`hi，欢迎${JSON.parse(msg).user}用户`);
+//   }
+//   $("#backuser").click(function () {
+//     localStorage.removeItem("loginUser");
+//     $("#usersayhello").html(`hi，欢迎来到集食惠`);
+//   })
 
-}
+//   // var carnum = JSON.stringify(getCookie("goods")).length;
+//   // topcount.innerHTML = carnum;
+
+// }
+$("#backuser").click(function () {
+  localStorage.removeItem("loginUser");
+  $("#h5num").html("0");
+  $("#usersayhello").html(`hi，欢迎来到集食惠`);
+})
 //这是绑定用户与购物车建立连接的部分
 class Lists {
   constructor() {
@@ -101,41 +106,47 @@ class Lists {
     this.addEvent();
   }
   load() {
-    var that=this;
+    var that = this;
     window.onload = function () {
-     that.login();
+      that.login();
     }
   }
-  login(){
+  login() {
+    //console.log(getCookie("ccc")=="")
+    //获取本地localstorage
     this.msg = localStorage.getItem("loginUser");
-    this.Lusername=JSON.parse(this.msg).user;
-    if (this.msg) {
+    //没有直接返回
+    if(this.msg == null) return;
+    //有，讲名字提取出来
+    this.Lusername = JSON.parse(this.msg).user;
       $("#usersayhello").html(`hi，欢迎${this.Lusername}用户`);
-    }
-    $("#backuser").click(function () {
-      localStorage.removeItem("loginUser");
-      $("#usersayhello").html(`hi，欢迎来到集食惠`);
-    })
-    let topcount = document.getElementById("h5num");
-    var carnum = JSON.stringify(getCookie("goods")).length;
-    topcount.innerHTML = carnum;
+      // 如果不为空证明有该用户的购物车
+      //console.log(getCookie(`${this.Lusername}`))
+      if ((getCookie(`${this.Lusername}`))!="") {
+        this.t = JSON.parse(getCookie(`${this.Lusername}`));
+        this.topcount.innerHTML = `${this.t.length}`;
+      }else{
+        this.topcount.innerHTML = "0";
+      }
+
+    
+    
   }
   addEvent() {
     var that = this;
     //2.1点击绑定事件
     for (var i = 0; i < this.cont.length; i++) {
       this.cont[i].onclick = function (eve) {
+        if(this.msg == null) return;
         that.id = eve.target.parentNode.getAttribute("id");
         that.setcookie(that.id);
-        var carnum = JSON.parse(getCookie("goods")).length;
-        that.topcount.innerHTML = carnum;
       }
     }
 
   }
   setcookie(Id) {
     //2.3规划数据格式并且判断该以什么方式存
-    this.goods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
+    this.goods = getCookie(`${this.Lusername}`) ? JSON.parse(getCookie(`${this.Lusername}`)) : [];
     //购物车为空直接存
     if (this.goods.length == 0) {
       this.goods.push({
@@ -161,14 +172,24 @@ class Lists {
       }
     }
     //2.4最后设置cookie
-    setCookie("goods", JSON.stringify(this.goods));
+    setCookie(`${this.Lusername}`, JSON.stringify(this.goods),1);
+    //设置完成以后再从新渲染页面
+    var ttt=JSON.parse(getCookie(`${this.Lusername}`));
+    var carlength=ttt.length;
+    this.topcount.innerHTML=carlength;
     // var carnum=JSON.parse(getCookie("goods")).length;
-    // this.topcount.innerHTML=carnum;
+    // 
   }
 
 
 }
 new Lists();
+
+
+
+
+
+
 
 
 

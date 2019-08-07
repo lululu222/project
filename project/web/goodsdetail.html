@@ -173,8 +173,8 @@
         <div class="s_menu">
             <span>
                 <a href="" class="num11">全部商品分类</a>
-                <a href="" class="num22 active">首页</a>
-                <a href="" class="num33">所有商品</a>
+                <a href="index.html" class="num22 active">首页</a>
+                <a href="list.html" class="num33">所有商品</a>
             </span>
 
         </div>
@@ -188,15 +188,10 @@
                 <!-- 商品左侧 -->
                 <div class="product_left">
                     <div class="imgleft">
-                        <img id="imgbig" class="my-foto"
-                            src="http://lyzbjbx.oss-cn-hangzhou.aliyuncs.com/lyzbjbxgo/shop/113/gallery/2018/07/04/15306758619771.jpg"
-                            data-large="http://lyzbjbx.oss-cn-hangzhou.aliyuncs.com/lyzbjbxgo/shop/113/gallery/2018/07/04/15306758619771.jpg"
-                            title="Фото">
+                        <img id="imgbig" class="my-foto" src=" " data-large=" " title="Фото">
                     </div>
                     <div class="imgths clearfix">
-                        <img id="imgsmall"
-                            src="http://lyzbjbx.oss-cn-hangzhou.aliyuncs.com/lyzbjbxgo/shop/113/gallery/2018/07/04/15306758619771.jpg"
-                            alt="">
+                        <img id="imgsmall" src=" " alt="">
                     </div>
                     <div class="user_handle">
                         <div class="share">
@@ -208,12 +203,12 @@
                 <div class="product_right clearfix">
                     <div class="r_left">
                         <div class="product_name">
-                            <h2 id="goodname">中华名果 巫山脆李 质地脆嫩汁多味美 重庆范围内包邮 3斤</h2>
+                            <h2 id="goodname"></h2>
                         </div>
                         <div class="product_information">
                             <div class="product_price">
                                 <div class="price_border">价格：
-                                    <span id="price">100</span>
+                                    <span id="price"></span>
                                     <h4>销售价</h4>
                                 </div>
                             </div>
@@ -272,12 +267,10 @@
             </ul>
             <div class="tab_cont">
                 <div class="tab_cont_title">
-                    中华名果 巫山脆李 质地脆嫩汁多味美 重庆范围内包邮 3斤
+
                 </div>
                 <div class="tab_img">
-                    <img id="imgdetail"
-                        src="http://lyzbimage.jbxgo.com/lyzbjbxgo/shop/113/gallery/2018/07/04/15306762968519.jpg"
-                        alt="">
+                    <img id="imgdetail" src=" " alt="">
                 </div>
             </div>
         </div>
@@ -314,6 +307,7 @@
 
 
 
+    var topcount=document.getElementById("carcount");
     var buycar = document.getElementById("buycar");
     var goodsname = document.getElementById("goodname");
     var goodsprice = document.getElementById("price");
@@ -335,17 +329,35 @@
                 for (var i = 0; i < res.length; i++) {
                     // console.log(res[i].goodsId);
                     if (res[i].goodsId == id) {
-                        var Id=res[i].goodsId;
+                        var Id = res[i].goodsId;
                         goodsimgb.setAttribute("src", `${res[i].img}`);
                         goodsimgb.setAttribute("data-large", `${res[i].img}`);
                         goodsimgs.setAttribute("src", `${res[i].img}`);
                         goodsname.innerHTML = `${res[i].title}`;
                         goodsprice.innerHTML = `${res[i].price}`;
                         detailimg.setAttribute("src", `${res[i].detail}`);
+
+                        var msg = localStorage.getItem("loginUser");
+                        //没有直接返回
+                        if (msg == null){
+                            alert("请先登录");
+                            return;
+                        };
+                        //有，讲名字提取出来
+                        var Lusername = JSON.parse(msg).user;
+                        // 如果不为空证明有该用户的购物车
+                        //console.log(getCookie(`${this.Lusername}`))
+                        if ((getCookie(`${Lusername}`)) != "") {
+                            t = JSON.parse(getCookie(`${Lusername}`));
+                            topcount.innerHTML = `${t.length}`;
+                        } else {
+                            topcount.innerHTML = "0";
+                        }
+
                         buycar.onclick = function () {
-                           
+
                             //var Id = goodsId;
-                            thisgoods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
+                            thisgoods = getCookie(`${Lusername}`) ? JSON.parse(getCookie(`${Lusername}`)) : [];
                             //购物车为空直接存
                             if (thisgoods.length == 0) {
                                 thisgoods.push({
@@ -371,7 +383,9 @@
                                 }
                             }
                             //2.4最后设置cookie
-                            setCookie("goods", JSON.stringify(thisgoods));
+                            setCookie(`${Lusername}`, JSON.stringify(thisgoods));
+                            t = JSON.parse(getCookie(`${Lusername}`));
+                            topcount.innerHTML = `${t.length}`;
                         }
                     }
                 }

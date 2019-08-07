@@ -181,39 +181,41 @@
     </div>
 
 
-<!-- 中间放置表格部分 -->
+    <!-- 中间放置表格部分 -->
 
     <div class="container">
-            <table border="1" cellspacing="0" width="800" align="center">
-                    <thead>
-                        <tr>
-                            <th width="160">图片</th>
-                            <th>名字</th>
-                            <th width="100">单价</th>
-                            <th width="100">数量</th>
-                            <th width="100">价格</th>
-                            <th width="100">操作</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="5">购物车为空</td>
-                        </tr>
-                        <!-- <tr>
+        <table border="1" cellspacing="0" width="800" align="center">
+            <thead>
+                <tr>
+                    <th width="160">图片</th>
+                    <th>名字</th>
+                    <th width="100">单价</th>
+                    <th width="100">数量</th>
+                    <th width="100">价格</th>
+                    <th width="100">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="5">购物车为空</td>
+                </tr>
+                <!-- <tr>
                             <td><img src=""></td>
                             <td>名字</td>
                             <td>价格</td>
                             <td><input type="number" value="10"></td>
                             <td >删除</td>
                         </tr> -->
-                    </tbody>
-                </table>
-                <h3 class="total">总价是:0元</h3>
-                <h3 class="two">点击结算</h3>
+            </tbody>
+        </table>
+        <h3 class="total">总价是:0元</h3>
+        <h3 class="two">点击结算</h3>
     </div>
 
 
-
+    <div class="zhifubao" style="width: 200px;height: 200px;position: absolute;z-index: 99;left: 300px;top: 200px;display: none;">
+        <img src="../data/images/zhifubao.png" alt="" style="width: 200px;height: 200px;">
+    </div>
 
 
 
@@ -231,6 +233,7 @@
 
     class Car {
         constructor() {
+            this.zhifubao=document.querySelector(".zhifubao");
             //获取元素
             this.carcount=document.querySelector("#carcount");
             this.tbody = document.querySelector("tbody");
@@ -252,8 +255,8 @@
                     that.index = eve.target.parentNode.getAttribute("index");
                     eve.target.parentNode.remove();
                     //删除也要重新渲染页面（总价）
-                    that.load();
                     that.del();
+                    that.load();
                 }
             })
             //2.2更改数量
@@ -266,6 +269,10 @@
                     that.changecookie();
                 }
             })
+            this.money.onclick=function(){
+                document.html.style.background="rgba(218, 213, 213,0.8)";
+                that.zhifubao.style.display="block";
+            }
 
         }
         //2.2.2 通过遍历改变cookie
@@ -276,7 +283,7 @@
                 }
             }
             
-            setCookie("goods", JSON.stringify(this.goods));
+            setCookie(`${this.Lusername}`, JSON.stringify(this.goods),1);
             //重新渲染页面（总价）
             this.display();
         }
@@ -288,7 +295,8 @@
                     this.goods.splice(i, 1);
                 }
             }
-            setCookie("goods", JSON.stringify(this.goods));
+            // console.log(this.Lusername);
+            setCookie(`${this.Lusername}`, JSON.stringify(this.goods),1);
         }
         //1.1初始渲染页面需要比对数据，读取数据库和cookie中共有的商品，将其渲染到页面上
         load() {
@@ -299,14 +307,21 @@
                 url:this.url, 
                 success:function (res){
                 that.res = JSON.parse(res);
-                that.getcookie();
+                that.msg = localStorage.getItem("loginUser");
+                if(that.msg == null) return;
+                //获取到了localstorage的用户名
+
+                that.Lusername = JSON.parse(that.msg).user;
+                //去获取cookie
+               // that.getcookie(that.Lusername);
+                if(getCookie(that.Lusername)=="") return;
+                that.getcookie(that.Lusername);
             }
         })
         }
-        getcookie() {
-            //1.3读取cookie
-            this.goods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
-           // console.log(this.goods)
+        getcookie(name) {
+            //这是cookie的数据
+            this.goods=JSON.parse(getCookie(name));
             this.display();
         }
         display() {
@@ -341,9 +356,6 @@
         }
     }
     new Car();
-
-
-
 
 
 
