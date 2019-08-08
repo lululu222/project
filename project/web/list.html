@@ -311,6 +311,8 @@
                     that.res = JSON.parse(res);
                     //1.2拿到数据渲染页面
                     that.display();
+                    that.displaypage();
+
                 }
             })
             this.login();
@@ -346,6 +348,7 @@
             this.detaildisplay();
 
         }
+
         login() {
             //获取本地localstorage
             this.msg = localStorage.getItem("loginUser");

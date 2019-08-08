@@ -91,16 +91,13 @@ class Register{
     }
     register(){
         var that=this;
-        if(this.ocheck=this.opass=this.ouser=this.opass2=this.otel=true){
-            this.btn.onclick=function(){
+        this.btn.onclick=function(){
+            if(that.ocheck=that.opass=that.ouser=that.opass2=that.otel=true){
                 that.load();
+            }else{
+                that.alertbox.innerHTML="信息不完整或者有误，请重新填写";
             }
-           
-        }else{
-            this.btn.onclick=function(){
-                this.alertbox.innerHTML="信息有误，请重新填写";
-            }
-        }
+        }  
     }
     load(){
         var that=this;
@@ -116,7 +113,7 @@ class Register{
             success:function(res){
                 res=JSON.parse(res);
                 if(res.code == 0){
-                    that.alertbox.innerHTML="用户名重复";
+                    that.alertbox.innerHTML=`<a href="">用户名重复，点击重新注册</a>`;
                 }else if(res.code == 1){
                     that.alertbox.innerHTML="注册成功，3秒后跳转";
                     setTimeout(()=>{

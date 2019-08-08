@@ -42,6 +42,20 @@
     margin: 0px 30px;
     margin-bottom: 20px;
 }
+#kejian,#bukejian{
+    color: #333;
+    position: absolute;
+    left:270px;
+    top:8px;
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+
+}
+#bukejian{
+    display: block;
+}
+
 
 /* 内容 */
 .middle{

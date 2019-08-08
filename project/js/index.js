@@ -64,8 +64,31 @@ $(function () {
 // 	timeout:100,				//可选，默认500
 // 	beforeSend:function(){}		//可选
 // })
+var aimg=document.querySelectorAll(".ljzt");
+var arr = Array.from(aimg);
+var t;
 
+onload = onscroll = function(){
+    // 函数节流：同一个时间单位内，如果多次执行同一个函数，拿到的结果一致的，利用计时器的方式，使得同一个时间单位内，只执行一次这个函数，达到节流的目的
+    clearTimeout(t);
+    t = setTimeout(function(){
+        fn();
+    },100)
+}
 
+function fn(){
+    var scrollT = document.documentElement.scrollTop;
+    var clientH = document.documentElement.clientHeight;
+    
+    for(var i=0;i<arr.length;i++){
+       // console.log(`i:${i}`);
+        if(arr[i].offsetTop - scrollT < clientH){
+            arr[i].src = arr[i].getAttribute("ljz");
+            // 小心使用：在循环中修改了循环次数
+            // arr.splice(i,1)
+        }
+    }
+}
 //这是设置商品详情跳转的部分
 var alla = document.querySelectorAll(".alla");
 for (var i = 0; i < alla.length; i++) {
@@ -117,7 +140,7 @@ class Lists {
     this.msg = localStorage.getItem("loginUser");
     //没有直接返回
     if(this.msg == null) return;
-    //有，讲名字提取出来
+      // 有，讲名字提取出来
     this.Lusername = JSON.parse(this.msg).user;
       $("#usersayhello").html(`hi，欢迎${this.Lusername}用户`);
       // 如果不为空证明有该用户的购物车
@@ -130,14 +153,13 @@ class Lists {
       }
 
     
-    
+   
   }
   addEvent() {
     var that = this;
     //2.1点击绑定事件
     for (var i = 0; i < this.cont.length; i++) {
       this.cont[i].onclick = function (eve) {
-        if(this.msg == null) return;
         that.id = eve.target.parentNode.getAttribute("id");
         that.setcookie(that.id);
       }
@@ -184,12 +206,6 @@ class Lists {
 
 }
 new Lists();
-
-
-
-
-
-
 
 
 

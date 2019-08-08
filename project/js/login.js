@@ -8,6 +8,8 @@ class Login{
         this.btn = $("#loginbtn");
         this.statea = $(".username_tip");
         this.stateb=$(".pass_tip");
+        this.kejian=$("#kejian");
+        this.bukejian=$("#bukejian");
         // 绑定点击事件
         this.addEvent();
     }
@@ -17,6 +19,30 @@ class Login{
             // 开启ajax
             that.load()
         })
+        this.bukejian.click(function(){
+            that.bukeload();
+        })
+        this.kejian.click(function(){
+            that.kejianload();
+        })
+    }
+    bukeload(){
+        this.bukejian.css({
+            display:"none"
+        });
+        this.kejian.css({
+            display:"block"
+        })
+        $("#pass").attr("type","text");
+    }
+    kejianload(){
+        this.bukejian.css({
+            display:"block"
+        });
+        this.kejian.css({
+            display:"none"
+        })
+        $("#pass").attr("type","password");
     }
     load(){
         // 请求登录接口
