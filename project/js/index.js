@@ -160,6 +160,11 @@ class Lists {
     //2.1点击绑定事件
     for (var i = 0; i < this.cont.length; i++) {
       this.cont[i].onclick = function (eve) {
+        this.msg = localStorage.getItem("loginUser");
+        if(this.msg == null){
+          alert("请先登录");
+          return;
+        }
         that.id = eve.target.parentNode.getAttribute("id");
         that.setcookie(that.id);
       }
@@ -206,6 +211,17 @@ class Lists {
 
 }
 new Lists();
+
+
+// for(var i=0;i<$(".cartext").length;i++){
+//   $(".cartext")[i].click(function(){
+//     $(".cartext")[i].parent("li").animate_from_to("#h5num");
+//   })
+// }
+
+
+
+
 
 
 

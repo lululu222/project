@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>商品列表</title>
     <link rel="stylesheet" href="../libs/iconfont/iconfont.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/list.css">
@@ -191,6 +191,18 @@
                 <div class="zuijin">
                     最近浏览
                 </div>
+                <div class="miaosha">
+                    <div class="mstop">
+                        限时秒杀
+                        <span class="miao" id="miao">10</span>
+                    </div>
+                    <div class="msimg">
+                        <img src="../data/images/liangyou.jpg" alt="" id="msimg">
+                    </div>
+                    <div class="mbottom">
+                        仅需要1元钱
+                    </div>
+                </div>
             </div>
             <div class="c_right">
                 <div class="product">
@@ -242,6 +254,8 @@
     <div class="lastbottom"></div>
 </body>
 <script src="../libs/js/jquery.1.12.4.js"></script>
+<script src="../libs/js/jquery-1.11.0.min.js"></script>
+<script src="../libs/js/jquery.animate_from_to-1.0.js"></script>
 <script src="../js/ajax.3.0.js"></script>
 <script src="../js/cookie.js"></script>
 <script>
@@ -264,6 +278,11 @@
             //2.1通过事件监听绑定事件
             this.cont.addEventListener("click", function (eve) {
                 if (eve.target.className == "carbtn") {
+                    this.msg = localStorage.getItem("loginUser");
+                    if (this.msg == null) {
+                        alert("请先登录");
+                        return;
+                    }
                     //2.2找到真正的点击元素，获取到具有唯一标示性的属性，存储到cookie中
                     that.id = eve.target.parentNode.getAttribute("qwe");
                     that.setCookie();
@@ -311,7 +330,7 @@
                     that.res = JSON.parse(res);
                     //1.2拿到数据渲染页面
                     that.display();
-                    that.displaypage();
+
 
                 }
             })
@@ -354,7 +373,7 @@
             this.msg = localStorage.getItem("loginUser");
             //没有直接返回
             if (this.msg == null) {
-                alert("请登录");
+               // alert("请登录");
                 return;
             }
             //有，讲名字提取出来
@@ -381,6 +400,23 @@
 
 
 
+    // miao  msimg
+    var miao = document.getElementById("miao");
+    var msimg = document.getElementById("msimg");
+    var t;
+    var startnum = miao.innerHTML;
+    t = setInterval(function () {
+        if (miao.innerHTML == 0) {
+            miao.innerHTML = startnum;
+            msimg.setAttribute("src", `../data/miao/${random(1, 9)}.jpg`);
+        } else {
+            miao.innerHTML--;
+        }
+    }, 1000)
+
+    function random(max, min) {
+        return Math.round(Math.random() * (max - min) + min)
+    }
 
 
 

@@ -287,6 +287,7 @@
 </body>
 <script src="../libs/js/jquery.1.12.4.js"></script>
 <script src="../libs/js/jquery-1.11.0.min.js"></script>
+<script src="../libs/js/jquery.animate_from_to-1.0.js"></script>
 <script src="../libs/js/zoomsl.min.js"></script>
 <script src="../js/ajax.3.0.js"></script>
 <script src="../js/cookie.js"></script>
@@ -305,9 +306,19 @@
         });
     });
 
+    //购物车
+    cont = document.querySelectorAll(".cartext");
+
+    $("#buycar").click(function () {
+        $("#imgbig").animate_from_to("#carcount");
+    })
 
 
-    var topcount=document.getElementById("carcount");
+
+
+
+
+    var topcount = document.getElementById("carcount");
     var buycar = document.getElementById("buycar");
     var goodsname = document.getElementById("goodname");
     var goodsprice = document.getElementById("price");
@@ -339,8 +350,8 @@
 
                         var msg = localStorage.getItem("loginUser");
                         //没有直接返回
-                        if (msg == null){
-                            alert("请先登录");
+                        if (msg == null) {
+                           // alert("请先登录");
                             return;
                         };
                         //有，讲名字提取出来
@@ -355,7 +366,12 @@
                         }
 
                         buycar.onclick = function () {
-
+                            var msg = localStorage.getItem("loginUser");
+                            //没有直接返回
+                            if (msg == null) {
+                                alert("请先登录");
+                                return;
+                            };
                             //var Id = goodsId;
                             thisgoods = getCookie(`${Lusername}`) ? JSON.parse(getCookie(`${Lusername}`)) : [];
                             //购物车为空直接存

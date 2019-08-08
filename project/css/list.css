@@ -315,6 +315,39 @@
       color: #666;
       padding-left: 10px;
       line-height: 34px; }
+      .listscontent .c_left .miaosha{
+        width: 188px;
+        border: 1px solid #e5e5e5;
+        margin: 10px 0;
+        height:244px;
+        background: #F8F8F8;
+        font-size: 14px;
+        color: #666;
+        line-height: 34px;}
+      .listscontent .c_left .miaosha .mstop{
+        width: 100%;
+        background: rgba(189, 188, 188,0.6);
+        color: #E60012;
+        font-size: 20px;
+        text-align: center;
+        height: 30px;
+        margin-bottom: 10px;
+        line-height: 30px;}
+        .listscontent .c_left .miaosha .msimg{
+          width: 100%;
+          height: 190px;}
+          .listscontent .c_left .miaosha .msimg img{
+            width: 100%;
+            height:100%;
+          }
+        .listscontent .c_left .miaosha .mbottom{
+          width: 100%;
+          margin-top: 10px;
+          height: 20px;
+          color: #E60012;
+          text-align: center;
+          line-height: 20px;
+          background: rgba(189, 188, 188,0.6);}
   .listscontent .c_right {
     float: right;
     width: 991px;
