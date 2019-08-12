@@ -135,7 +135,8 @@
     <!-- 中间logo部分 -->
     <div class="logo">
         <div class="container">
-            <img src="http://www.lyzb.com/global/images/index2.0/logo.png" alt="">
+            <a href="index.html">
+            <img src="http://www.lyzb.com/global/images/index2.0/logo.png" alt=""></a>
             <div class="box">
                 <div class="top clearfix">
                     <i class="iconfont mig">&#xe631;</i>
@@ -359,8 +360,14 @@
                         // 如果不为空证明有该用户的购物车
                         //console.log(getCookie(`${this.Lusername}`))
                         if ((getCookie(`${Lusername}`)) != "") {
-                            t = JSON.parse(getCookie(`${Lusername}`));
-                            topcount.innerHTML = `${t.length}`;
+                            let t = JSON.parse(getCookie(`${Lusername}`));
+                            let tnum=0;
+                            for(var i=0;i<t.length;i++){
+                               
+                                tnum += parseInt(t[i].num);
+                            }
+                            // console.log(tnum);
+                            topcount.innerHTML =tnum;
                         } else {
                             topcount.innerHTML = "0";
                         }
@@ -389,7 +396,7 @@
                                 })
                                 //旧商品增加数量
                                 if (onoff) {
-                                    thisgoods[i].num == thisgoods[i].num;
+                                    thisgoods[i].num ++;
                                 } else {
                                     //新商品直接存
                                     thisgoods.push({
@@ -400,8 +407,12 @@
                             }
                             //2.4最后设置cookie
                             setCookie(`${Lusername}`, JSON.stringify(thisgoods));
-                            t = JSON.parse(getCookie(`${Lusername}`));
-                            topcount.innerHTML = `${t.length}`;
+                            let t = JSON.parse(getCookie(`${Lusername}`));
+                            let tnum=0;
+                            for(var i=0;i<t.length;i++){
+                                tnum+= parseInt(t[i].num);
+                            }
+                            topcount.innerHTML = `${tnum}`;
                         }
                     }
                 }

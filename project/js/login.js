@@ -16,6 +16,10 @@ class Login{
     addEvent(){
         var that = this;
         this.btn.click(function(){
+            if(that.user.val()==""||that.pass.val==""){
+                $("#innertext").html("请输入您的信息");
+                return;
+            }
             // 开启ajax
             that.load()
         })
@@ -58,18 +62,18 @@ class Login{
                 this.res = JSON.parse(res);
                 // console.log(res);
                 if(this.res.code == 2){
-                    this.statea.html("帐号密码不符，请<a href='login.html'>重新登录</a>");
-                    this.stateb.html("帐号密码不符，请<a href='login.html'>重新登录</a>")
+                    $("#innertext").html("帐号密码不符，请<a href='login.html'>重新登录</a>");
+                    $("#innertext").html("帐号密码不符，请<a href='login.html'>重新登录</a>")
                 }else if(this.res.code == 1){
                     // 登录成功之后，存储状态
                     this.setState()
 
-                    this.stateb.html("登录成功,3秒后跳转到<a href='index.html'>首页</a>");
+                    $("#innertext").html("登录成功,3秒后跳转到<a href='index.html'>首页</a>");
                     setTimeout(() => {
                         location.href="index.html";
                     }, 3000);
                 }else if(this.res.code == 0){
-                    this.statea.html("该用户不存在，请<a href='register.html'>注册</a>")
+                    $("#innertext").html("该用户不存在，请<a href='register.html'>注册</a>")
                 }
             }
         })

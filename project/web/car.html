@@ -135,7 +135,8 @@
     <!-- 中间logo部分 -->
     <div class="logo">
         <div class="container">
-            <img src="http://www.lyzb.com/global/images/index2.0/logo.png" alt="">
+            <a href="index.html">
+            <img src="http://www.lyzb.com/global/images/index2.0/logo.png" alt=""></a>
             <div class="box">
                 <div class="top clearfix">
                     <i class="iconfont mig">&#xe631;</i>
@@ -342,7 +343,7 @@
                                 <td>价格:${resval.price*goodsval.num}元</td>
                                 <td class="del" style="cursor:pointer;">删除</td>
                             </tr>`;
-                        sts++;
+                        sts +=  parseInt(goodsval.num);
                         total += resval.price*goodsval.num;
                         this.carcount.innerHTML=`${sts}`
                     }

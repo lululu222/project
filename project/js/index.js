@@ -147,7 +147,11 @@ class Lists {
       //console.log(getCookie(`${this.Lusername}`))
       if ((getCookie(`${this.Lusername}`))!="") {
         this.t = JSON.parse(getCookie(`${this.Lusername}`));
-        this.topcount.innerHTML = `${this.t.length}`;
+        this.numbercar=0;
+        for(var i=0;i<this.t.length;i++){
+          this.numbercar+= parseInt(this.t[i].num);
+        }
+        this.topcount.innerHTML = this.numbercar;
       }else{
         this.topcount.innerHTML = "0";
       }
@@ -202,9 +206,13 @@ class Lists {
     setCookie(`${this.Lusername}`, JSON.stringify(this.goods),1);
     //设置完成以后再从新渲染页面
     var ttt=JSON.parse(getCookie(`${this.Lusername}`));
-    var carlength=ttt.length;
+    var carlength=0;
+    for(var i=0;i<ttt.length;i++){
+      carlength += parseInt(ttt[i].num);
+    }
     this.topcount.innerHTML=carlength;
     // var carnum=JSON.parse(getCookie("goods")).length;
+    // this.load();
     // 
   }
 
